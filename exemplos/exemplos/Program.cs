@@ -43,6 +43,17 @@ namespace exemplos
             Console.WriteLine("Nome Completo: "+ NomeCompleto(nomePessoa, sobrenome));
             Console.WriteLine("\n\n\n");
             CalculoIdade(idade,idadeMae);
+
+            Console.WriteLine("\n-----------------------------------------------------------");
+            var pessoa = new Pessoa();
+            pessoa.Nome = nomePessoa;
+            pessoa.Sobrenome = sobrenome;
+            pessoa.Cpf = "123456789-00";
+
+            Console.WriteLine($"Nome: {pessoa.Nome}\nCPF: {pessoa.Cpf}");
+            Console.WriteLine("\n\n\n");
+            Console.WriteLine("Nome: {pessoa.Nome}",pessoa.NomeCompleto(pessoa.Nome,pessoa.Sobrenome));
+
             Console.ReadKey();
         }
     }
